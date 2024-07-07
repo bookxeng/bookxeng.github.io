@@ -25,20 +25,18 @@ const Navbar = () =>{
                 </li>
             </ul>
             <div className="hidden lg:flex fixed flex-col right-0 top-[35%]">
-                <ul>
-                    <li className="font-bold flex w-[160px] h-[60px] items-center mr-[-100px] hover:mr-[10px] duration-500 justify-between">
-                        <a href="https://github.com/bookxeng" className="flex items-center w-full">
-                            <FaGithub size={35}/>
-                            <span className="ml-6">Github</span>
-                        </a>
-                    </li>
-                    <li className="font-bold flex w-[160px] h-[60px] items-center mr-[-100px] hover:mr-[10px] duration-500 justify-between">
-                        <a href="mailto:pongnapatlimmongkolhirun@gmail.com" className="flex items-center w-full">
-                            <MdEmail size={35}/>
-                            <span className="ml-6">Email</span>
-                        </a>
-                    </li>
-                </ul>
+                <div className=" flex w-[160px] h-[60px] items-center mr-[-100px] hover:mr-[10px] duration-500 ">
+                    <a href="https://github.com/bookxeng" className="flex items-center font-bold">
+                        <FaGithub size={35}/>&emsp; Github
+                    </a>
+                </div>
+            </div>
+            <div className="hidden lg:flex fixed flex-col right-0 top-[45%]">
+                <div className=" flex w-[160px] h-[60px] items-center mr-[-100px] hover:mr-[10px] duration-500 justify-between">
+                    <a href="mailto:pongnapatlimmongkolhirun@gmail.com" className="flex items-center font-bold">
+                        <MdEmail size={35}/>&emsp; Email
+                    </a>
+                </div>
             </div>
         </div>
     );
