@@ -2,33 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply bg-black text-gray-300 antialiased;
+}
+
+::selection {
+  @apply bg-brand-blue text-brand-cream;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-}
 
+  .text-gradient {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-cream;
+  }
+
+  .text-gradient-hover {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-white to-white hover:from-brand-blue hover:to-brand-cream;
+  }
+}
